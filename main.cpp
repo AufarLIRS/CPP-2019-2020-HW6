@@ -16,4 +16,5 @@ int main()
   MyUniquePtr<double> p1(&a);
   MyUniquePtr<double> p2(&b);
   p2 = std::move(p1);
+  std::cout << "end";
 }
