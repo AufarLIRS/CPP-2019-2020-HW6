@@ -5,9 +5,9 @@ using namespace std;
 template <typename T>
 void MySwap(T& a, T& b)
 {
-  auto temp = a;
-  a = b;
-  b = temp;
+  auto temp = std::move(a);
+  a = std::move(b);
+  b = std::move(temp);
 }
 
 int main()
