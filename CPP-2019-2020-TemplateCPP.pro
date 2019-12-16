@@ -5,3 +5,8 @@ CONFIG -= qt
 
 SOURCES += \
         main.cpp
+
+HEADERS += \
+    MyUniquePtr.h \
+    swap.h \
+    template.h
