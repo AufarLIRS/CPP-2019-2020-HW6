@@ -17,10 +17,24 @@ public:
     delete myptr_;
   }
 
+  T getUniquePtr()
+  {
+    return *myptr_;
+  }
+
   MyUniquePtr(const MyUniquePtr&) = delete;
   MyUniquePtr& operator=(const MyUniquePtr&) = delete;
-  MyUniquePtr(MyUniquePtr&&) = default;
-  MyUniquePtr& operator=(MyUniquePtr&&) = default;
+  MyUniquePtr(MyUniquePtr&& other)
+  {
+    myptr_ = other.myptr_;
+    other.myptr_ = nullptr;
+  }
+  MyUniquePtr& operator=(MyUniquePtr&& other)
+  {
+    myptr_ = other.myptr_;
+    other.myptr_ = nullptr;
+    return *this;
+  }
 };
 
 #endif  // MYUNIQUEPTR_H
