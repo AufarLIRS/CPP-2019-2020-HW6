@@ -15,6 +15,7 @@ public:
   {
     delete pointer_;
   }
+
   MyUniquePointer& operator=(const MyUniquePointer&) = delete;
 
   MyUniquePointer(const MyUniquePointer&) = delete;
