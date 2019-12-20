@@ -13,16 +13,16 @@ void mySwap(T& first_param, T& second_param)
 
 int main()
 {
-  std::string a = "Param A";
-  std::string b = "We must sequire the existence of C++ and the future of our white and green QT creator";
+  string* a = new string("Param A");
+  string* b = new string("We must sequire the existence of C++ and the future of our white and green QT creator");
 
   mySwap(a, b);
   cout << "Param a contains: " << a << endl;
   cout << "Param b contains: " << b << endl;
   cout << "" << endl;
 
-  MyUniquePointer<std::string> pointerTest1(&a);
-  MyUniquePointer<std::string> pointerTest2(&b);
+  MyUniquePointer<std::string> pointerTest1(a);
+  MyUniquePointer<std::string> pointerTest2(b);
   pointerTest1 = move(pointerTest2);
 
   return 0;
