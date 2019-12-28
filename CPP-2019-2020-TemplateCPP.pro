@@ -4,4 +4,12 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.cpp
+        Array.cpp \
+        main.cpp \
+        swap.cpp \
+    MyUniquePtr.cpp
+
+HEADERS += \
+    Array.h \
+    swap.h \
+    MyUniquePtr.h
