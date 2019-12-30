@@ -1,4 +1,5 @@
 #include "Array.h"
+#include "exception"
 
 template <typename T>
 Array<T>::Array(size_t size)
@@ -17,8 +18,8 @@ T& Array<T>::operator[](size_t index)
 {
   if (index > -1 && index < size_)
     return array_[index];
-  else
-    return NULL;
+    std::exception e;
+    throw e;
 }
 template <typename T>
 Array<T>::~Array()

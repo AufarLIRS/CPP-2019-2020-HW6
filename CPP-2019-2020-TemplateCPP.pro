@@ -15,4 +15,3 @@ HEADERS += \
     Array.h \
     swap.h \
     MyUniquePtr.h \
- Array.h \
