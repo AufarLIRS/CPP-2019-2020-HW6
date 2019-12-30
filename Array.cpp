@@ -1,4 +1,5 @@
 #include "Array.h"
+
 template <typename T>
 Array<T>::Array(size_t size)
 {
@@ -18,4 +19,9 @@ T& Array<T>::operator[](size_t index)
     return array_[index];
   else
     return NULL;
+}
+template <typename T>
+Array<T>::~Array()
+{
+  delete[] array_;
 }

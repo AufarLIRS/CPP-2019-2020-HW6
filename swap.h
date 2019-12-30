@@ -1,12 +1,9 @@
 #ifndef SWAP_H
 #define SWAP_H
 
-template <class T>
-void swap(T* a, T* b)
+namespace non_std
 {
-  T c = *a;
-  *a = *b;
-  *b = c;
+template <class T>
+void swap(T* a, T* b);
 }
-
 #endif  // SWAP_H

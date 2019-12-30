@@ -1,5 +1,7 @@
 TEMPLATE = app
-CONFIG += console c++11
+CONFIG += c++11
+
+QMAKE_CXXFLAGS += -std=c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
@@ -12,4 +14,5 @@ SOURCES += \
 HEADERS += \
     Array.h \
     swap.h \
-    MyUniquePtr.h
+    MyUniquePtr.h \
+ Array.h \
