@@ -4,6 +4,6 @@
 namespace non_std
 {
 template <class T>
-void swap(T* a, T* b);
+void swap(T& a, T& b);
 }
 #endif  // SWAP_H
