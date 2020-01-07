@@ -6,8 +6,12 @@
 
 int main()
 {
-   std::string a = "aaaaaaa";
-   std::string b = "bbbbbbb";
-   non_std::swap(a,b);
-   std::cout << a;
+    Array<int> ints(10);
+    for(int i = 0; i < 10; i++){
+        ints[i] = i;
+    }
+
+    for(int i = 0; i < 10; i++)
+        std::cout << ints[i] << " ";
+
 }

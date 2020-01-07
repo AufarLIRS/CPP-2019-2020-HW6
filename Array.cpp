@@ -15,13 +15,24 @@ size_t Array<T>::size() const
 }
 
 template <typename T>
-T& Array<T>::operator[](size_t index)
+T& Array<T>::operator [](size_t index)
 {
   if (index > -1 && index < size_)
     return array_[index];
-  //std::exception e;
- // throw e;
+  std::exception e;
+  throw e;
 }
+
+template <typename T>
+
+T Array<T>::operator [](size_t index) const
+{
+  if (index > -1 && index < size_)
+    return array_[index];
+  std::exception e;
+  throw e;
+}
+
 template <typename T>
 Array<T>::~Array()
 {
