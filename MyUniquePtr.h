@@ -32,7 +32,7 @@ public:
       this->pointer = pointer;
     }
 
-    MyUniquePtr<T>& operator=(MyUniquePtr&& a)
+    MyUniquePtr<T>& operator=(MyUniquePtr& a)
     {
       this->pointer = a.pointer;
       a.pointer = nullptr;

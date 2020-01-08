@@ -4,15 +4,14 @@
 #include <MyUniquePtr.h>
 int main()
 {
-
-    int c = 42;
-
-    std::cout << &c<< std::endl;
-
-   int *a = &c;
-
-   std::cout << a << std::endl;
-    MyUniquePtr<int> ptr(a);
-
+   int *a = new int;
+   a[0]=42;
+   int *q = new int;
+   q[0]=0;
+    MyUniquePtr<int> ptr(a);\
+    MyUniquePtr<int> ptr1(q);
+    ptr1 = ptr;
+    std::cout << ptr.getPonter() << std::endl;
+    std::cout << ptr1.getContent() << std::endl;
     return 0;
 }
