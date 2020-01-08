@@ -6,10 +6,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        Array.cpp \
-        main.cpp \
-        swap.cpp \
-    MyUniquePtr.cpp
+        main.cpp
 
 HEADERS += \
     Array.h \

@@ -1,17 +1,18 @@
 #include <iostream>
 #include <swap.h>
 #include <Array.h>
-#include <Array.cpp>
-#include <swap.cpp>
-
+#include <MyUniquePtr.h>
 int main()
 {
-    Array<int> ints(10);
-    for(int i = 0; i < 10; i++){
-        ints[i] = i;
-    }
 
-    for(int i = 0; i < 10; i++)
-        std::cout << ints[i] << " ";
+    int c = 42;
 
+    std::cout << &c<< std::endl;
+
+   int *a = &c;
+
+   std::cout << a << std::endl;
+    MyUniquePtr<int> ptr(a);
+
+    return 0;
 }
